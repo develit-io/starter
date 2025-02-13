@@ -3,7 +3,7 @@
 // import { tables } from '@services/template/src/database/drizzle'
 import { Workers } from '@develit-io/workers-sdk'
 
-export default class TemplateService extends Workers.DevelitWorkerEntrypoint<TemplateEnv> {
+export default class Template extends Workers.DevelitWorkerEntrypoint<TemplateEnv> {
   // private db: DrizzleD1Database<typeof tables>
   // constructor(ctx: ExecutionContext, env: TemplateEnv) {
   //   super(ctx, env)

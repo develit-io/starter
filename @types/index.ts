@@ -1,5 +1,5 @@
-import type TemplateService from '@services/template/src/index'
+import type Template from '../src/index'
 
-export type TemplateWorkerRPC = InstanceType<typeof TemplateService>
+export type TemplateRPC = InstanceType<typeof TemplateService>
 
 // export * from './io'
