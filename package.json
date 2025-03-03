@@ -5,19 +5,21 @@
   "scripts": {
     "deploy": "npx wrangler deploy",
     "dev": "npx wrangler dev",
-    "cf:typegen": "npx wrangler types --env-interface OrganizationEnv",
+    "cf:typegen": "npx wrangler types --env-interface TemplateEnv",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
     "db:generate": "npx drizzle-kit generate",
-    "db:migrate": "npx wrangler d1 migrations apply organization_d1"
+    "db:migrate": "npx wrangler d1 migrations apply template_d1"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.6.13",
-    "@types/node":  "20.8.3",
-    "drizzle-orm": "^0.39.3",
-    "drizzle-kit": "^0.30.4",
-    "@cloudflare/workers-types": "^4.20250204.0",
+    "@cloudflare/vitest-pool-workers": "^0.7.4",
+    "@types/node": "20.8.3",
+    "drizzle-orm": "^0.40.0",
+    "drizzle-kit": "^0.30.5",
+    "@cloudflare/workers-types": "^4.20250224.0",
+    "@develit-io/workers-sdk": "1.4.0",
     "zod": "^3.24.2"
-  }
+  },
+  "packageManager": "pnpm@9.15.6+sha512.139cab068fdf0b751268179ac5f909b5be72afb4a75c513d1905d151befc8977b593d3cf8671ed83d4d6637c5c94b98ffbce108125de4a5a27a31233601a99de"
 }
