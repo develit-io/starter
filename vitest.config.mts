@@ -13,7 +13,6 @@ const configService = {
 
 export default defineProject({ ...defineConfig({
     test: {
-      workspace: ['services/*', 'packages/*'],
       coverage: {
         provider: 'istanbul',
         thresholds: {
@@ -21,7 +20,6 @@ export default defineProject({ ...defineConfig({
         },
         exclude: [
           '**/commitlint.config.*',
-          'services/**/dist',
           ...coverageConfigDefaults.exclude,
         ],
         excludeAfterRemap: true,
