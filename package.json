@@ -1,25 +1,26 @@
 {
-  "name": "@services/template",
-  "version": "0.0.0",
+  "name": "template",
   "private": true,
   "scripts": {
-    "deploy": "npx wrangler deploy",
-    "dev": "npx wrangler dev",
-    "cf:typegen": "npx wrangler types --env-interface TemplateEnv",
+    "build": "nitro build",
+    "deploy": "pnpm run build && wrangler deploy",
+    "dev": "nitro dev",
+    "prepare": "nitro prepare",
+    "preview": "pnpm run build && wrangler dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
-    "db:generate": "npx drizzle-kit generate",
-    "db:migrate": "npx wrangler d1 migrations apply template_d1"
+    "cf:typegen": "wrangler types --experimental-include-runtime"
   },
+  "dependencies": {
+    "@cloudflare/vitest-pool-workers": "latest",
+    "@cloudflare/workers-types": "latest",
+    "nitropack": "latest",
+    "vitest": "latest"
+  },
+  "version": "0.0.1",
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.7.4",
-    "@types/node": "20.8.3",
-    "drizzle-orm": "^0.40.0",
-    "drizzle-kit": "^0.30.5",
-    "@cloudflare/workers-types": "^4.20250224.0",
-    "@develit-io/workers-sdk": "1.4.0",
-    "zod": "^3.24.2"
+    "nitro-cloudflare-dev": "latest"
   },
   "packageManager": "pnpm@9.15.6+sha512.139cab068fdf0b751268179ac5f909b5be72afb4a75c513d1905d151befc8977b593d3cf8671ed83d4d6637c5c94b98ffbce108125de4a5a27a31233601a99de"
 }

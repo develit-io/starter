@@ -1,11 +1,30 @@
-import { defineWorkersConfig } from '@cloudflare/vitest-pool-workers/dist/config'
+import path from 'path'
+import { defineProject, defineConfig, coverageConfigDefaults } from 'vitest/config'
+import configGlobal from './vitest.config.mjs'
 
-export default defineWorkersConfig({
-  test: {
-    poolOptions: {
-      workers: {
-        wrangler: { configPath: './wrangler.toml' },
-      },
+const configService = {
+  resolve: {
+    alias: {
+      '#imports': path.resolve(__dirname, './.nitro/types/nitro-imports.d.ts'),
+      '~': path.resolve(__dirname, './server'),
     },
   },
-})
+}
+
+export default defineProject({ ...defineConfig({
+    test: {
+      workspace: ['services/*', 'packages/*'],
+      coverage: {
+        provider: 'istanbul',
+        thresholds: {
+          100: true,
+        },
+        exclude: [
+          '**/commitlint.config.*',
+          'services/**/dist',
+          ...coverageConfigDefaults.exclude,
+        ],
+        excludeAfterRemap: true,
+      },
+    },
+  }), ...configService })
