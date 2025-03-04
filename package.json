@@ -13,13 +13,13 @@
     "db:migrate": "npx wrangler d1 migrations apply template_d1"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.7.4",
-    "@types/node": "20.8.3",
-    "drizzle-orm": "^0.40.0",
-    "drizzle-kit": "^0.30.5",
-    "@cloudflare/workers-types": "^4.20250224.0",
-    "@develit-io/workers-sdk": "1.4.0",
-    "zod": "^3.24.2"
+    "@cloudflare/vitest-pool-workers": "latest",
+    "@types/node": "latest",
+    "drizzle-orm": "latest",
+    "drizzle-kit": "latest",
+    "@cloudflare/workers-types": "latest",
+    "@develit-io/workers-sdk": "latest",
+    "zod": "latest"
   },
   "packageManager": "pnpm@9.15.6+sha512.139cab068fdf0b751268179ac5f909b5be72afb4a75c513d1905d151befc8977b593d3cf8671ed83d4d6637c5c94b98ffbce108125de4a5a27a31233601a99de"
 }
