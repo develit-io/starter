@@ -2,10 +2,6 @@
 Quickly get started with a Develit.io template!
 
 
-# 🪄 Develit Starter Templates
-
-Quickly get started with a minimal Nuxt starter template!
-
 ## Usage
 
 You can use `develit` CLI to clone latest template to an empty directory:
