@@ -18,4 +18,7 @@ export default defineNitroConfig({
   typescript: {
     strict: true,
   },
+  rollupConfig: {
+    external: ['cloudflare:workers'],
+  },
 })
