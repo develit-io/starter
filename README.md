@@ -1,1 +1,1 @@
-Worker Entrypoint Template
+# Worker Entrypoint Template
