@@ -31,4 +31,4 @@ For improvements, please open a Pull Request to each individual branch.
 
 ## License
 
-[MIT](./LICENSE) - Made with 💚
+[Open Source](./LICENSE.md) - Made with 💚
