@@ -1,0 +1,8 @@
+{
+  "name": "@packages/types",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Develit.io",
+  "license": "ISC",
+  "types": "./types.d.ts"
+}

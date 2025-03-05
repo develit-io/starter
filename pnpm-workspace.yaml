@@ -1,0 +1,7 @@
+packages:
+  - services/**/
+  - apps/**/
+  - packages/**/
+catalog:
+  nitropack: latest
+  nitro-cloudflare-dev: latest

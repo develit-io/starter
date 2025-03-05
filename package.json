@@ -1,0 +1,42 @@
+{
+  "name": "fiat-processor",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "pnpm -r typecheck",
+    "cf:typegen": "pnpm -r cf:typegen",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:unit:all": "vitest unit",
+    "test:unit:shared": "vitest --project @packages/shared",
+    "test:int:all": "vitest integration",
+    "postinstall": "simple-git-hooks && pnpm cf:typegen && pnpm lint:fix"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "latest",
+    "@cloudflare/workers-types": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@commitlint/types": "latest",
+    "@develit-io/workers-sdk": "latest",
+    "@nuxt/eslint-config": "latest",
+    "@types/node": "20.8.3",
+    "@vitest/coverage-istanbul": "latest",
+    "eslint": "latest",
+    "lint-staged": "latest",
+    "simple-git-hooks": "latest",
+    "typescript": "latest",
+    "vitest": "latest",
+    "wrangler": "latest"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit $1",
+    "pre-commit": "npx lint-staged"
+  }
+}
