@@ -8,7 +8,7 @@ You can use `develit` CLI to clone latest template to an empty directory:
 
 
 ```sh-session
-$ npx develit Create [<dir>] [-t,--template=<template>] 
+$ npx develit create [<dir>] [-t,--template=<template>] 
 ```
 
 **Example:** Clone `worker-entrypoint` to `my-app` directory:
@@ -31,4 +31,4 @@ For improvements, please open a Pull Request to each individual branch.
 
 ## License
 
-[Open Source](./LICENSE.md) - Made with 💚
+[Open Source © Develit.io](./LICENSE.md) - Made with 💚
